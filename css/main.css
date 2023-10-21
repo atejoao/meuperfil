@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     height: 100%;
     width: 100%;
@@ -24,7 +23,7 @@ body{
 }
 .name{
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     font-size: 32px;
@@ -33,12 +32,13 @@ body{
     font-family: monospace;
 }
 .Redes-Sociais{
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     display: flex; /* Organizar itens na mesma linha */
     justify-content: center;
     align-items: center; /* Alinhamento de itens */
 }
-.icon, .email{
+.icon, #email{
     display: inline-block;
     height: 35px;
     width: 35px;
@@ -49,7 +49,7 @@ body{
     margin: 3px;
     overflow: hidden;
 }
-.icon i, .email i{ /* O "i" se refere ao icon que acompanha a class do icon no html */
+.icon i, #email i{ /* O "i" se refere ao icon que acompanha a class do icon no html */
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -101,15 +101,204 @@ body{
     color: #ffffff;
     background:linear-gradient(rgb(13, 43, 109), rgb(23, 111, 170));
 }
-.texto{
-    margin-top: 40px;
-    color: #ffffff;
-    font-family: monospace;
-    justify-content: center;
-    font-size: 18px;
-    
-}
+/* Fim CSS Redes Sociais */
+/* Texto */
 
 .email:hover i{
-
+    background: gray;
 }
+.texto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: justify;
+    width: 500px;
+    height: 180px;
+    padding: 50px 20px 20px 20px;
+    border-radius: 5px;
+    color: white;
+    background: rgba(84, 95, 95, 0.13);
+    overflow: hidden;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    /* cursor: pointer; */
+}
+#o-inicio{
+    position: absolute;
+    top: 5px;
+    display: flex;
+    padding: 05px 00px 05px 00px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: justify;
+}
+.subtitulo{
+    padding: 05px 00px 05px 00px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: justify;   
+}
+.linguagem{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    width: 500px;
+}
+.linguagem img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0px, 0px, 0px, 0px;
+}
+.Projetos{
+    margin: auto;
+    margin-top: 10px;
+    flex-direction: column;;  
+}
+.Projetos a{
+    text-decoration: none;
+    color: white;
+}
+.item{
+    margin: 10px auto 00px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 22px;
+    color: white;
+    border: 5px solid rgba(102, 102, 102, 0.658);
+    border-radius: 50px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 7px;
+}
+#video{
+    padding: 10px;
+    margin: auto;
+    display: none;
+}
+#video.active{
+    display: block;
+}
+.rodapé{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: justify;
+    color: white;
+}
+
+/* Fim das configurações para DESKTOP */
+
+/* Dispositivos Mobile */
+@media (max-width: 700px) { /* Resolução 700px */
+    .imagem img {
+        width: 150px;
+        border-radius: 200px;
+        margin-top: 30px;
+    }
+    .texto {
+        width: 350px;
+        height: 235px;
+    }
+    .linguagem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 165px;
+    }
+    .linguagem img {
+        width: 165px;
+    }
+    .item {
+        width: 350px;
+    }
+    #video {
+        width: 300px;
+    }
+} /* Fim resolução 700px */
+
+@media(max-width: 700px) {
+    .imagem img {
+        width: 120px;    
+    }
+    .texto {
+        padding: 10px, 5px, 0px, 5px;
+        width: 244px;
+        height: 370px;
+        margin-top: 30px;
+    }
+    .subtitulo {
+        height: 22px;
+        font-size: 22px;
+    }
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #video {
+        width: 270px;
+        height: 160px;
+    }
+    .item {
+        width: 265px;
+        height: 40px;
+    }
+    .linguagem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .linguagem img {
+        margin-left: -50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .icon, #email {
+        width: 25px;
+        height: 25px;
+        border-radius: 30px;
+    }
+    .icon i, #email i {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+    .icon span a{
+        margin-right: 43px;
+        line-height: 20px;
+        font-size: 15px;
+    }
+    .rodapé{
+        font-size: 20px;
+        margin-top: 30px;
+        padding: 20px;
+    }
+}/* Fim resolução 500px */
